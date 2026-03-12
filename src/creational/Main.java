@@ -32,11 +32,13 @@ public class Main {
 
         System.out.println("\n--- 6. Prototype ---");
         BulbConfig livingRoomBulb = new BulbConfig("White", 100);
-        BulbConfig bedroomBulb = livingRoomBulb.clone();
+
+        BulbConfig bedroomBulb = (BulbConfig) livingRoomBulb.doClone();
+
         bedroomBulb.setColor("Warm Yellow");
         bedroomBulb.setBrightness(40);
 
-        System.out.println("Оригінал Вітальня: " + livingRoomBulb);
-        System.out.println("Клон Спальня: " + bedroomBulb);
+        System.out.println("Оригінал (Вітальня): " + livingRoomBulb);
+        System.out.println("Клон (Спальня): " + bedroomBulb);
     }
 }
